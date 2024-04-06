@@ -6,10 +6,11 @@ import {
 } from "@payloadcms/plugin-cloud-storage/dist/types";
 import path from "path";
 import Client from "ssh2-sftp-client";
+import type { ConnectOptions } from "ssh2-sftp-client";
 import type { Configuration as WebpackConfig } from "webpack";
 
 interface SFTPAdapterConfig {
-  connectOptions: Client.ConnectOptions;
+  connectOptions: ConnectOptions;
   destinationPathRoot: string;
   publicEndpoint: string;
 }
