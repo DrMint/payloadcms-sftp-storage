@@ -1,0 +1,29 @@
+{
+  "name": "payloadcms-sftp-storage",
+  "version": "1.0.0",
+  "description": "SFTP adapter for Payload CMS's plugin-cloud-storage plugin",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "postbuild": "copyfiles -u 1 src/mock.js dist",
+    "prepack": "npm run build && npm run postbuild"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DrMint/payloadcms-sftp-storage.git"
+  },
+  "files": [
+    "dist"
+  ],
+  "author": "dr_mint",
+  "license": "MIT",
+  "dependencies": {
+    "@payloadcms/plugin-cloud-storage": "^1.1.2",
+    "ssh2-sftp-client": "^10.0.3"
+  },
+  "devDependencies": {
+    "copyfiles": "^2.4.1",
+    "@types/ssh2-sftp-client": "^9.0.3"
+  }
+}
